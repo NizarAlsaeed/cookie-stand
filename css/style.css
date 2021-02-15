@@ -21,3 +21,26 @@ ul {
 ul li{
     padding: 2px;
 }
+table{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Lucida Sans';
+}
+th{
+    font-size: large;
+    padding: 5px;
+    font-weight: bold;
+
+
+}
+tr{
+    background-color: rgb(182, 173, 155);
+    border: white 5px solid;
+    height: 40px;
+
+
+}
+td{
+    width: 80px;
+}
