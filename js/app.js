@@ -1,250 +1,116 @@
-
-
-var seattle={
-    place:'Seattle',
-    workingH:15,
-    minCustomersPerH:23,
-    maxCustomersPerH:65,
-    avgCookiesPerCustomer:6.3,
-    cookiesArry:[],
-    calculateCookies:function (){ 
-        let purchasedCookies,customersPerH;
-        this.cookiesArry[this.workingH]=0;
-    for(let i=0; i<this.workingH;i++){
-        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
-        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
-        this.cookiesArry[i]=Math.round((purchasedCookies));
-        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
-    }},
-    render:function(){
-        let prefex;
-        const sectionEl=window.document.querySelector('#cookiesLists');
-        const h2El=  document.createElement('h2');
-        const ulEl=  document.createElement('ul');
-        sectionEl.appendChild(h2El);
-        h2El.textContent=this.place;
-        sectionEl.appendChild(ulEl);
-        for(let i=0; i<=this.workingH;i++){
-            const liEl=document.createElement('li');
-            ulEl.appendChild(liEl);
-            //6am:11am- 12pm - 8 pm
-                if(i<=5){
-                    prefex = `${i+6}:00 am`;
-                }
-                if(i===6){
-                    prefex = `${i+6}:00 pm`;
-                }
-                if(i>6){
-                    prefex = `${i-6}:00 pm`;
-                }
-                if(i===this.workingH){
-                    prefex = `Total: `;
-                }
-                liEl.textContent=`${prefex} ${this.cookiesArry[i]} cookies`;
-            }
-
-},
-    
-};
-
-
-var tokyo={
-    place:'Tokyo',
-    workingH:15,
-    minCustomersPerH:3,
-    maxCustomersPerH:24,
-    avgCookiesPerCustomer:1.2,
-    cookiesArry:[],
-    calculateCookies:function (){ 
-        let purchasedCookies,customersPerH;
-        this.cookiesArry[this.workingH]=0;
-    for(let i=0; i<this.workingH;i++){
-        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
-        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
-        this.cookiesArry[i]=Math.round((purchasedCookies));
-        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
-    }},
-    render:function(){
-        let prefex;
-        const sectionEl=window.document.querySelector('#cookiesLists');
-        const h2El=  document.createElement('h2');
-        const ulEl=  document.createElement('ul');
-        sectionEl.appendChild(h2El);
-        h2El.textContent=this.place;
-        sectionEl.appendChild(ulEl);
-        for(let i=0; i<=this.workingH;i++){
-            const liEl=document.createElement('li');
-            ulEl.appendChild(liEl);
-            //6am:11am- 12pm - 8 pm
-                if(i<=5){
-                    prefex = `${i+6}:00 am`;
-                }
-                if(i===6){
-                    prefex = `${i+6}:00 pm`;
-                }
-                if(i>6){
-                    prefex = `${i-6}:00 pm`;
-                }
-                if(i===this.workingH){
-                    prefex = `Total: `;
-                }
-                liEl.textContent=`${prefex} ${this.cookiesArry[i]} cookies`;
-            }
-
-},
-    
-};
-var dubai={
-    place:'Dubai',
-    workingH:15,
-    minCustomersPerH:11,
-    maxCustomersPerH:38,
-    avgCookiesPerCustomer:3.7,
-    cookiesArry:[],
-    calculateCookies:function (){ 
-        let purchasedCookies,customersPerH;
-        this.cookiesArry[this.workingH]=0;
-    for(let i=0; i<this.workingH;i++){
-        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
-        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
-        this.cookiesArry[i]=Math.round((purchasedCookies));
-        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
-    }},
-    render:function(){
-        let prefex;
-        const sectionEl=window.document.querySelector('#cookiesLists');
-        const h2El=  document.createElement('h2');
-        const ulEl=  document.createElement('ul');
-        sectionEl.appendChild(h2El);
-        h2El.textContent=this.place;
-        sectionEl.appendChild(ulEl);
-        for(let i=0; i<=this.workingH;i++){
-            const liEl=document.createElement('li');
-            ulEl.appendChild(liEl);
-            //6am:11am- 12pm - 8 pm
-                if(i<=5){
-                    prefex = `${i+6}:00 am`;
-                }
-                if(i===6){
-                    prefex = `${i+6}:00 pm`;
-                }
-                if(i>6){
-                    prefex = `${i-6}:00 pm`;
-                }
-                if(i===this.workingH){
-                    prefex = `Total: `;
-                }
-                liEl.textContent=`${prefex} ${this.cookiesArry[i]} cookies`;
-            }
-
-},
-    
-};
-var paris={
-    place:'Paris',
-    workingH:15,
-    minCustomersPerH:20,
-    maxCustomersPerH:38,
-    avgCookiesPerCustomer:2.3,
-    cookiesArry:[],
-    calculateCookies:function (){ 
-        let purchasedCookies,customersPerH;
-        this.cookiesArry[this.workingH]=0;
-    for(let i=0; i<this.workingH;i++){
-        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
-        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
-        this.cookiesArry[i]=Math.round((purchasedCookies));
-        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
-    }},
-    render:function(){
-        let prefex;
-        const sectionEl=window.document.querySelector('#cookiesLists');
-        const h2El=  document.createElement('h2');
-        const ulEl=  document.createElement('ul');
-        sectionEl.appendChild(h2El);
-        h2El.textContent=this.place;
-        sectionEl.appendChild(ulEl);
-        for(let i=0; i<=this.workingH;i++){
-            const liEl=document.createElement('li');
-            ulEl.appendChild(liEl);
-            //6am:11am- 12pm - 8 pm
-                if(i<=5){
-                    prefex = `${i+6}:00 am`;
-                }
-                if(i===6){
-                    prefex = `${i+6}:00 pm`;
-                }
-                if(i>6){
-                    prefex = `${i-6}:00 pm`;
-                }
-                if(i===this.workingH){
-                    prefex = `Total: `;
-                }
-                liEl.textContent=`${prefex} ${this.cookiesArry[i]} cookies`;
-            }
-
-},
-    
-};
-var lima={
-    place:'Lima',
-    workingH:15,
-    minCustomersPerH:2,
-    maxCustomersPerH:16,
-    avgCookiesPerCustomer:4.6,
-    cookiesArry:[],
-    calculateCookies:function (){ 
-        let purchasedCookies,customersPerH;
-        this.cookiesArry[this.workingH]=0;
-    for(let i=0; i<this.workingH;i++){
-        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
-        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
-        this.cookiesArry[i]=Math.round((purchasedCookies));
-        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
-    }},
-    render:function(){
-        let prefex;
-        const sectionEl=window.document.querySelector('#cookiesLists');
-        const h2El=  document.createElement('h2');
-        const ulEl=  document.createElement('ul');
-        sectionEl.appendChild(h2El);
-        h2El.textContent=this.place;
-        sectionEl.appendChild(ulEl);
-        for(let i=0; i<=this.workingH;i++){
-            const liEl=document.createElement('li');
-            ulEl.appendChild(liEl);
-            //6am:11am- 12pm - 8 pm
-                if(i<=5){
-                    prefex = `${i+6}:00 am`;
-                }
-                if(i===6){
-                    prefex = `${i+6}:00 pm`;
-                }
-                if(i>6){
-                    prefex = `${i-6}:00 pm`;
-                }
-                if(i===this.workingH){
-                    prefex = `Total: `;
-                }
-                liEl.textContent=`${prefex} ${this.cookiesArry[i]} cookies`;
-            }
-
-},
-    
-};
-
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  seattle.calculateCookies();
-  seattle.render();
-  tokyo.calculateCookies();
-  tokyo.render();
-  dubai.calculateCookies();
-  dubai.render();
-  paris.calculateCookies();
-  paris.render();
-  lima.calculateCookies();
-  lima.render();
+function Shop (place, minCustomersPerH,maxCustomersPerH,avgCookiesPerCustomer) {
+    this.place=place;
+    this.workingH=15;
+    this.minCustomersPerH=minCustomersPerH;
+    this.maxCustomersPerH=maxCustomersPerH;
+    this.avgCookiesPerCustomer=avgCookiesPerCustomer;
+    this.cookiesArry=[];  
+}
+
+Shop.prototype.calculateCookies=function (){ 
+    let purchasedCookies,customersPerH;
+    this.cookiesArry[this.workingH]=0;
+    for(let i=0; i<this.workingH;i++){
+        customersPerH=getRandomNumber(this.minCustomersPerH,this.maxCustomersPerH);
+        purchasedCookies= this.avgCookiesPerCustomer*customersPerH;
+        this.cookiesArry[i]=Math.round((purchasedCookies));
+        this.cookiesArry[this.workingH]+=this.cookiesArry[i];
+        tableDataArr[multiArrIndex][i]=(this.cookiesArry[i]);
+        tableDataArr[multiArrIndex][this.workingH]=this.cookiesArry[this.workingH];}
+};
+
+Shop.prototype.render=function(){
+    this.calculateCookies();
+    const rowEl = document.createElement('tr');
+    tableEl.appendChild(rowEl);
+    const thEl = document.createElement('th');
+    rowEl.appendChild(thEl);
+    thEl.textContent = this.place;
+    rowEl.appendChild(thEl);
+     for(let i=0; i<=this.workingH;i++){
+        const tdEl = document.createElement('td');
+        rowEl.appendChild(tdEl);
+        tdEl.textContent=` ${this.cookiesArry[i]} `;} 
+};
+
+
+
+let tableDataArr=[[],[],[],[],[],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]];
+let multiArrIndex;
+const sectionEl=window.document.querySelector('#cookiesLists');
+const tableEl = document.createElement('table');
+sectionEl.appendChild(tableEl);
+
+
+function tableHeader(){
+    const rowEl = document.createElement('tr');
+    tableEl.appendChild(rowEl);
+    const thEl = document.createElement('th');
+    rowEl.appendChild(thEl);
+    thEl.textContent = 'Shop Location';
+    rowEl.appendChild(thEl);
+
+    for(let i=0; i<=15;i++){
+        const tdEl = document.createElement('th');
+        rowEl.appendChild(tdEl);
+        if(i<=5){
+            prefex = `${i+6}:00 am`;
+        }
+        else if(i===6){
+            prefex = `${i+6}:00 pm`;
+        }
+        else if(i>6){
+            prefex = `${i-6}:00 pm`;
+        }
+        if(i===15){
+            prefex = `Daily Location Total `;
+        }
+        tdEl.textContent=`${prefex}  `;}
+}
+
+function startRendring(numberOfShops,workHours){
+    multiArrIndex=0;
+    seattle.render();
+    multiArrIndex++;
+    tokyo.render();
+    multiArrIndex++;
+    dubai.render();
+    multiArrIndex++;
+    paris.render();
+    multiArrIndex++;
+    lima.render();
+    const rowEl = document.createElement('tr');
+    tableEl.appendChild(rowEl);
+    const thEl = document.createElement('th');
+    rowEl.appendChild(thEl);
+    thEl.textContent = 'Totals';
+    rowEl.appendChild(thEl);
+    for (let i = 0; i < numberOfShops; i++) {
+        for(let j=0;j<(workHours+2);j++){
+            tableDataArr[numberOfShops][j] +=tableDataArr[i][j];
+        }      
+    }
+    for(let i=0; i<(workHours+2);i++){
+        const tdEl = document.createElement('th');
+        rowEl.appendChild(tdEl);
+        tdEl.textContent=tableDataArr[numberOfShops][i];} 
+
+}
+
+
+//-------------------------------------------------------------------
+const seattle = new Shop('Seattle',23 ,65,6.3);
+const tokyo = new Shop('Tokyo',3 ,24,1.2);
+const dubai = new Shop('Dubai',11 ,38,3.7);
+const paris = new Shop('Paris',20 ,38,2.3);
+const lima = new Shop('Lima',2 ,16,4.6);
+
+tableHeader();
+startRendring(5,14);
+
+
 
