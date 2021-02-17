@@ -204,3 +204,14 @@ tr{
 td{
     width: 80px;
 }
+form{
+    margin: 20px;
+    margin-bottom: 100px;
+}
+form legend{
+    margin: 50px;
+    font-size: larger;
+}
+form label{
+    padding: 10px;
+}
