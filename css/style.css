@@ -203,10 +203,14 @@ tr{
 }
 td{
     width: 80px;
+    color: black;
 }
 form{
     margin: 20px;
     margin-bottom: 100px;
+    display: inline-block;
+    width: 400px;
+    
 }
 form legend{
     margin: 50px;
@@ -214,4 +218,16 @@ form legend{
 }
 form label{
     padding: 10px;
+    margin-bottom: 20px;
+}
+
+form input{
+    margin-bottom: 20px;
+}
+
+#submit{
+margin: 20px 0 0 130px;
+width: 120px;
+height: 40px;
+cursor: pointer;
 }
